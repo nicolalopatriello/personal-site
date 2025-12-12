@@ -4,12 +4,13 @@ interface Props {
     alt: string;
     size?: string;
 }
+import { Image } from 'astro:assets';
 
 const { src, alt, size = '150px' } = Astro.props;
 ---
 
 <div class="circle-image" style={`--size: ${size}`}>
-    <img src={src} alt={alt} />
+    <Image src={src} alt={alt} />
 </div>
 
 <style>
